@@ -1,0 +1,27 @@
+/* SearchBox.css */
+
+/* Style for the search box container */
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the input field */
+  .search-input {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #333;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  

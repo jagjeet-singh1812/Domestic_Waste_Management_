@@ -76,6 +76,14 @@ const Navigation = () => {
                 Contact us
               </label>
             </li>
+            <li>
+              <Link to="/trashme" className="desktop-item">
+                Trash me
+              </Link>
+              <label  className="mobile-item">
+                Trash me
+              </label>
+            </li>
           </ul>
 
           <ul>
