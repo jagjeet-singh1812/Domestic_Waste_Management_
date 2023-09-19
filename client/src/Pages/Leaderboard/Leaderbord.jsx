@@ -1,11 +1,11 @@
-import React, { useState,useRef } from "react";
+import React, { useState, useRef} from "react";
 import "./leaderboard.css";
 import leaderboardData from "./leaderboard.json";
 
 const itemsPerPage = 8;
 
 const Leaderboard = () => {
-  const pdfref=useRef();
+  const pdfref = useRef();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchInput, setSearchInput] = useState("");
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -67,7 +67,7 @@ const Leaderboard = () => {
         </div>
       </section>
       <section className="table__body" ref={pdfref}>
-        <table >
+        <table>
           <thead>
             <tr>
               <th>

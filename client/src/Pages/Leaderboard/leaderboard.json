@@ -8,7 +8,7 @@
       "Location": "Seoul",
       "Order Date": "17 Dec, 2022",
       "Status": "Delivered",
-      "Amount": "$128.90"
+      "Amount": "128.90"
     },
     {
       "Id": 2,
@@ -19,7 +19,7 @@
       "Location": "Kathmandu",
       "Order Date": "27 Aug, 2023",
       "Status": "Cancelled",
-      "Amount": "$5350.50"
+      "Amount": "5350.50"
     },
     {
       "Id": 3,
@@ -30,7 +30,7 @@
       "Location": "Tokyo",
       "Order Date": "14 Mar, 2023",
       "Status": "Shipped",
-      "Amount": "$210.40"
+      "Amount": "210.40"
     },
     {
       "Id": 4,
@@ -41,7 +41,7 @@
       "Location": "New Delhi",
       "Order Date": "25 May, 2023",
       "Status": "Delivered",
-      "Amount": "$149.70"
+      "Amount": "149.70"
     },
     {
       "Id": 5,
@@ -52,7 +52,7 @@
       "Location": "Paris",
       "Order Date": "23 Apr, 2023",
       "Status": "Pending",
-      "Amount": "$399.99"
+      "Amount": "399.99"
     },
     {
       "Id": 6,
@@ -63,7 +63,7 @@
       "Location": "London",
       "Order Date": "23 Apr, 2023",
       "Status": "Cancelled",
-      "Amount": "$399.99"
+      "Amount": "399.99"
     },
     {
       "Id": 7,
@@ -74,7 +74,7 @@
       "Location": "New York",
       "Order Date": "20 May, 2023",
       "Status": "Delivered",
-      "Amount": "$399.99"
+      "Amount": "399.99"
     },
     {
       "Id": 8,
@@ -85,7 +85,7 @@
       "Location": "Islamabad",
       "Order Date": "30 Feb, 2023",
       "Status": "Pending",
-      "Amount": "$149.70"
+      "Amount": "149.70"
     },
     {
       "Id": 9,
@@ -96,7 +96,7 @@
       "Location": "Dhaka",
       "Order Date": "22 Dec, 2023",
       "Status": "Cancelled",
-      "Amount": "$249.99"
+      "Amount": "249.99"
     }
   ]
   

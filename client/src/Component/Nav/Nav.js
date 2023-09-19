@@ -85,7 +85,6 @@ const Navigation = () => {
               </label>
             </li>
           </ul>
-
           <ul>
             <li>
               <Link to="/login" className="desktop-item">
