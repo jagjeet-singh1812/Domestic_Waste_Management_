@@ -59,14 +59,7 @@ const Navigation = () => {
               </label>
             </li>
 
-            <li>
-              <Link to="/company" className="desktop-item">
-                Company
-              </Link>
-              <label  className="mobile-item">
-                Company
-              </label>
-            </li>
+            
             <li>
               <Link to="/company" className="desktop-item">
                 About us

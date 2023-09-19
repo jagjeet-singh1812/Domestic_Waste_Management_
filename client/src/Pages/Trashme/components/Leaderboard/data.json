@@ -1,0 +1,78 @@
+[
+    {
+      "rank": 1,
+      "familyName": "Smith",
+      "points": 350
+    },
+    {
+      "rank": 2,
+      "familyName": "Jones",
+      "points": 280
+    },
+    {
+      "rank": 3,
+      "familyName": "Doe",
+      "points": 220
+    },
+    {
+      "rank": 4,
+      "familyName": "Johnson",
+      "points": 180
+    },
+    {
+      "rank": 5,
+      "familyName": "Brown",
+      "points": 150
+    },
+    {
+      "rank": 6,
+      "familyName": "Wilson",
+      "points": 130
+    },
+    {
+      "rank": 7,
+      "familyName": "Anderson",
+      "points": 120
+    },
+    {
+      "rank": 8,
+      "familyName": "Martinez",
+      "points": 110
+    },
+    {
+      "rank": 9,
+      "familyName": "Garcia",
+      "points": 100
+    },
+    {
+      "rank": 10,
+      "familyName": "Taylor",
+      "points": 90
+    },
+    {
+      "rank": 11,
+      "familyName": "Harris",
+      "points": 80
+    },
+    {
+      "rank": 12,
+      "familyName": "White",
+      "points": 70
+    },
+    {
+      "rank": 13,
+      "familyName": "Lee",
+      "points": 60
+    },
+    {
+      "rank": 14,
+      "familyName": "Jackson",
+      "points": 50
+    },
+    {
+      "rank": 15,
+      "familyName": "Thompson",
+      "points": 40
+    }
+  ]
+  

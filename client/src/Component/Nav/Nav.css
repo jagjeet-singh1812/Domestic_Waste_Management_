@@ -322,10 +322,9 @@ nav input{
   }
   
   .custom-button:hover {
-    background-color: greenyellow;
-    color: var(--neutral-color-3);
+    background-color: rgb(93, 133, 32);
+    color: var(--text-color);
   }
-  
   .content{
     border-radius: 11px;
 }
