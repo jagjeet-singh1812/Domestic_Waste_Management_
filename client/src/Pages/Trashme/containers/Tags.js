@@ -50,9 +50,17 @@ export const TAGS = {
     },
     "Non-recyclable":
     {
-      id: 7,
+      id: 8,
       trash_bin: 'Trash only bin',
       bin_image:"https://thumbs.dreamstime.com/b/garbage-can-do-not-recycle-symbol-concept-non-recyclable-items-materials-167273592.jpg",
       fact: "These are for materials that cannot be recycled. They will end up in a landfill, which makes a lot of negative impact on the environment."
     },
+    "Glass":
+    {
+        id: 9,
+        trash_bin: 'Glass Recycling Bin',
+        bin_image: 'https://images.thdstatic.com/productImages/e74c180c-7ad9-4252-a3b9-48a18deaa238/svn/rubbermaid-recycling-bins-rcp295773blue-64_1000.jpg',
+        fact: 'Glass can be recycled, and it should be placed in a designated glass recycling bin. Recycling glass helps save energy and reduce waste.'
+      }
+      
   };

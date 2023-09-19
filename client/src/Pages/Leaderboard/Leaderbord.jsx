@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import "./leaderboard.css";
 import leaderboardData from "./leaderboard.json";
 
-const itemsPerPage = 5;
+const itemsPerPage = 8;
 
 const Leaderboard = () => {
+  const pdfref=useRef();
   const [currentPage, setCurrentPage] = useState(1);
   const [searchInput, setSearchInput] = useState("");
-
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
@@ -32,7 +32,7 @@ const Leaderboard = () => {
   return (
     <main className="table">
       <section className="table__header">
-        <h1>Customer's Orders</h1>
+        <h1>Leaderboard</h1>
         <div className="input-group">
           <input
             type="search"
@@ -66,17 +66,17 @@ const Leaderboard = () => {
           </div>
         </div>
       </section>
-      <section className="table__body">
-        <table>
+      <section className="table__body" ref={pdfref}>
+        <table >
           <thead>
             <tr>
               <th>
                 {" "}
-                Id <span className="icon-arrow">↑</span>
+                Rank<span className="icon-arrow">↑</span>
               </th>
               <th>
                 {" "}
-                Customer <span className="icon-arrow">↑</span>
+                Username <span className="icon-arrow">↑</span>
               </th>
               <th>
                 {" "}
@@ -84,15 +84,15 @@ const Leaderboard = () => {
               </th>
               <th>
                 {" "}
-                Order Date <span className="icon-arrow">↑</span>
+                Last Point Date <span className="icon-arrow">↑</span>
               </th>
-              <th>
+              {/* <th>
                 {" "}
                 Status <span className="icon-arrow">↑</span>
-              </th>
+              </th> */}
               <th>
                 {" "}
-                Amount <span className="icon-arrow">↑</span>
+                Points <span className="icon-arrow">↑</span>
               </th>
             </tr>
           </thead>
@@ -106,11 +106,11 @@ const Leaderboard = () => {
                 </td>
                 <td>{row.Location}</td>
                 <td>{row["Order Date"]}</td>
-                <td>
+                {/* <td>
                   <p className={`status ${row.Status.toLowerCase()}`}>
                     {row.Status}
                   </p>
-                </td>
+                </td> */}
                 <td>
                   <strong>{row.Amount}</strong>
                 </td>

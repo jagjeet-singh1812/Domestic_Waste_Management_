@@ -60,4 +60,125 @@ export const items = [
       tag: ['Hazardous chemical'],
       image: 'https://m.media-amazon.com/images/I/21I+MnBGtML._AC_SY780_.jpg'
     },
+    {
+      id: 11,
+      name: 'Glass Bottle',
+      tag: ['Glass'],
+      image: 'https://images.unsplash.com/photo-1608745167260-e15bc0e0521f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1936&q=80'
+    },
+    {
+      id: 12,
+      name: 'Plastic Water Bottle',
+      tag: ['Plastic'],
+      image: 'https://images.unsplash.com/photo-1616118132534-381148898bb4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80'
+    },
+    // {
+    //   id: 13,
+    //   name: 'Aluminum Can',
+    //   tag: ['Metal', 'Recyclable'],
+    //   image: 'https://images.punkapi.com/v2/2.png'
+    // },
+    // {
+    //   id: 14,
+    //   name: 'Newspaper',
+    //   tag: ['Paper', 'Recyclable'],
+    //   image: 'https://images.punkapi.com/v2/3.png'
+    // },
+    // {
+    //   id: 15,
+    //   name: 'Cardboard Box',
+    //   tag: ['Paper', 'Recyclable'],
+    //   image: 'https://images.punkapi.com/v2/4.png'
+    // },
+    // {
+    //   id: 16,
+    //   name: 'Glass Jar',
+    //   tag: ['Glass', 'Recyclable'],
+    //   image: 'https://images.punkapi.com/v2/5.png'
+    // },
+    // {
+    //   id: 17,
+    //   name: 'Plastic Bag',
+    //   tag: ['Plastic', 'Non-recyclable'],
+    //   image: 'https://images.punkapi.com/v2/6.png'
+    // },
+    // {
+    //   id: 18,
+    //   name: 'Tin Can',
+    //   tag: ['Metal', 'Recyclable'],
+    //   image: 'https://images.punkapi.com/v2/7.png'
+    // },
+    // {
+    //   id: 19,
+    //   name: 'Glass Cup',
+    //   tag: ['Glass', 'Recyclable'],
+    //   image: 'https://images.punkapi.com/v2/8.png'
+    // },
+    // {
+    //   id: 20,
+    //   name: 'Plastic Cutlery',
+    //   tag: ['Plastic', 'Non-recyclable'],
+    //   image: 'https://images.punkapi.com/v2/9.png'
+    // },
+    // {
+    //     id: 21,
+    //     name: 'Glass Bottle',
+    //     tag: ['Glass', 'Recyclable'],
+    //     image: 'https://example.com/glass-bottle.jpg'
+    //   },
+    //   {
+    //     id: 22,
+    //     name: 'Plastic Bottle',
+    //     tag: ['Plastic', 'Recyclable'],
+    //     image: 'https://example.com/plastic-bottle.jpg'
+    //   },
+    //   {
+    //     id: 23,
+    //     name: 'Aluminum Can',
+    //     tag: ['Metal', 'Recyclable'],
+    //     image: 'https://example.com/aluminum-can.jpg'
+    //   },
+    //   {
+    //     id: 24,
+    //     name: 'Newspaper',
+    //     tag: ['Paper', 'Recyclable'],
+    //     image: 'https://example.com/newspaper.jpg'
+    //   },
+    //   {
+    //     id: 25,
+    //     name: 'Cardboard Box',
+    //     tag: ['Paper', 'Recyclable'],
+    //     image: 'https://example.com/cardboard-box.jpg'
+    //   },
+    //   {
+    //     id: 26,
+    //     name: 'Glass Jar',
+    //     tag: ['Glass', 'Recyclable'],
+    //     image: 'https://example.com/glass-jar.jpg'
+    //   },
+    //   {
+    //     id: 27,
+    //     name: 'Plastic Bag',
+    //     tag: ['Plastic', 'Non-recyclable'],
+    //     image: 'https://example.com/plastic-bag.jpg'
+    //   },
+    //   {
+    //     id: 28,
+    //     name: 'Tin Can',
+    //     tag: ['Metal', 'Recyclable'],
+    //     image: 'https://example.com/tin-can.jpg'
+    //   },
+    //   {
+    //     id: 29,
+    //     name: 'Glass Cup',
+    //     tag: ['Glass', 'Recyclable'],
+    //     image: 'https://example.com/glass-cup.jpg'
+    //   },
+    //   {
+    //     id: 30,
+    //     name: 'Plastic Cutlery',
+    //     tag: ['Plastic', 'Non-recyclable'],
+    //     image: 'https://example.com/plastic-cutlery.jpg'
+    //   }
   ];
+  
