@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+:root{
+background-color:#ffffff;
+--second-background-color:#000D25;
+--text-color:#080a13;
+--secondary-color: #4DEBD4;
+--primary-color: #007BFF;
+--accent-color-1: #00C853;
+--accent-color-2: #FF5722;
+--accent-color-3: #9C27B0;
+--neutral-color-1: #F5F5F5;
+--neutral-color-2: #333333;
+--neutral-color-3: #FFFFFF;
+}
+
+*{
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+
+.temp{
+  min-height: 15vh;
+  /* background: radial-gradient(100.18% 488.14% at 50% 50%, rgba(77, 235, 212, 0) 23.23%, rgba(77, 235, 212, 0.365) 85.73%); */
+}
+
