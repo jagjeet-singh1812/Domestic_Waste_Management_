@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import "./leaderboard.css";
 import leaderboardData from "./leaderboard.json";
+import { saveAs } from "file-saver";
+import * as XLSX from "xlsx";
 
 const itemsPerPage = 5;
 
 const Leaderboard = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchInput, setSearchInput] = useState("");
+  const [exportOptionsVisible, setExportOptionsVisible] = useState(false);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -29,10 +32,42 @@ const Leaderboard = () => {
     setCurrentPage(1); // Reset to the first page when searching
   };
 
+  const handleExportClick = () => {
+    setExportOptionsVisible((prev) => {
+      return prev === true ? false : true;
+    });
+  };
+
+  const handleExportJSON = () => {
+    const jsonData = JSON.stringify(visibleData, null, 2);
+    const blob = new Blob([jsonData], { type: "application/json" });
+    saveAs(blob, "leaderboard.json");
+    window.location.reload();
+  };
+
+  const handleExportCSV = () => {
+    const csvData = visibleData.map((row) => {
+      return {
+        Id: row.Id,
+        Customer: row.Customer.Name,
+        Location: row.Location,
+        "Order Date": row["Order Date"],
+        Status: row.Status,
+        Amount: row.Amount,
+      };
+    });
+
+    const ws = XLSX.utils.json_to_sheet(csvData);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Leaderboard");
+    XLSX.writeFile(wb, "leaderboard.csv");
+    window.location.reload();
+  };
+
   return (
     <main className="table">
       <section className="table__header">
-        <h1>Customer's Orders</h1>
+        <h1>Leader Board</h1>
         <div className="input-group">
           <input
             type="search"
@@ -47,23 +82,25 @@ const Leaderboard = () => {
             htmlFor="export-file"
             className="export__file-btn"
             title="Export File"
+            onClick={handleExportClick}
           ></label>
           <input type="checkbox" id="export-file" />
-          <div className="export__file-options">
-            <label>Export As &nbsp; ➜</label>
-            <label htmlFor="export-file" id="toPDF">
-              PDF <img src="/images/pdf.png" alt="PDF" />
-            </label>
-            <label htmlFor="export-file" id="toJSON">
-              JSON <img src="/images/json.png" alt="JSON" />
-            </label>
-            <label htmlFor="export-file" id="toCSV">
-              CSV <img src="/images/csv.png" alt="CSV" />
-            </label>
-            <label htmlFor="export-file" id="toEXCEL">
-              EXCEL <img src="/images/excel.png" alt="EXCEL" />
-            </label>
-          </div>
+          {exportOptionsVisible && (
+            <div className="export__file-options">
+              <label>Export As &nbsp; ➜</label>
+
+              <label
+                onClick={handleExportJSON}
+                htmlFor="export-file"
+                id="toJSON"
+              >
+                JSON <img src="/images/json.png" alt="JSON" />
+              </label>
+              <label onClick={handleExportCSV} htmlFor="export-file" id="toCSV">
+                CSV <img src="/images/csv.png" alt="CSV" />
+              </label>
+            </div>
+          )}
         </div>
       </section>
       <section className="table__body">
