@@ -1,0 +1,58 @@
+/* CardList.css */
+
+/* Style for the card list container */
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Style for individual cards */
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style for card content */
+  .card-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Style for card title */
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for card tags */
+  .card-tags {
+    font-size: 1rem;
+    color: #777; /* Light gray text color */
+  }
+  
+  /* Style for card image */
+  .card-image {
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+  }
+  
+  /* Style for the loading message */
+  .loading-message {
+    font-size: 1.5rem;
+    color: #333; /* Dark gray text color */
+    margin-top: 20px;
+  }
+  

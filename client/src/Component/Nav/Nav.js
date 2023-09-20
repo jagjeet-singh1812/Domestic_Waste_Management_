@@ -59,14 +59,7 @@ const Navigation = () => {
               </label>
             </li>
 
-            <li>
-              <Link to="/company" className="desktop-item">
-                Company
-              </Link>
-              <label  className="mobile-item">
-                Company
-              </label>
-            </li>
+            
             <li>
               <Link to="/company" className="desktop-item">
                 About us
@@ -81,10 +74,17 @@ const Navigation = () => {
               </Link>
               <label  className="mobile-item">
                 Contact us
+              </label>
+            </li>
+            <li>
+              <Link to="/trashme" className="desktop-item">
+                Trash me
+              </Link>
+              <label  className="mobile-item">
+                Trash me
               </label>
             </li>
           </ul>
-
           <ul>
             <li>
               <Link to="/login" className="desktop-item">
