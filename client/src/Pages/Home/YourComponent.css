@@ -88,9 +88,10 @@
   }
   
   /* Style for the survey section */
-  .custom-survey {
+  /* Base styles for the custom survey section */
+.custom-survey {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     margin-bottom: 30px;
   }
   
@@ -107,6 +108,7 @@
     background-color: #fff;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    margin-top: 20px; /* Add margin to separate image and text on small screens */
   }
   
   /* Style for the survey text heading */
@@ -119,6 +121,21 @@
   .custom-survey-text p {
     font-size: 16px;
     margin-bottom: 15px;
+  }
+  
+  /* Responsive styles */
+  @media screen and (min-width: 1015px) {
+    /* Apply these styles for screens wider than 768px */
+    .custom-survey {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    /* Adjust the margin for the text container */
+    .custom-survey-text {
+      margin-top: 0;
+      margin-left: 20px; /* Add some space between image and text */
+    }
   }
   
   /* Style for the disease statistics section */
