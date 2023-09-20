@@ -1,0 +1,29 @@
+.grid-aptc{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.container-aptc{
+  background-color: #ccc;
+  display:flex;
+  flex-direction: row;
+  width:400px;
+  height: 160px ;
+  margin: 70px 50px;
+}
+.img-aptc{
+  width:8rem;
+}
+.heading-aptc{
+  padding: 30px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.btn-aptc{
+    margin-top: 11px;
+    padding: 5px 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    margin-bottom: 40px;
+}

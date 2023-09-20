@@ -1,0 +1,29 @@
+.grid-local{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.container-local{
+  background-color: #ccc;
+  display:flex;
+  flex-direction: row;
+  width:400px;
+  height: 160px ;
+  margin: 70px 50px;
+}
+.img-local{
+  width:8rem;
+}
+.heading-local{
+  padding: 30px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.btn-local{
+    margin-top: 11px;
+    padding: 5px 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    margin-bottom: 40px;
+}
