@@ -4,7 +4,7 @@ import leaderboardData from "./leaderboard.json";
 import { saveAs } from "file-saver";
 import * as XLSX from "xlsx";
 
-const itemsPerPage = 5;
+const itemsPerPage = 6;
 
 const Leaderboard = () => {
   const [currentPage, setCurrentPage] = useState(1);
