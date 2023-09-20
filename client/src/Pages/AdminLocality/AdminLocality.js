@@ -5,8 +5,7 @@ import avatar from "../../Assets/avatar.jpg"
 const AdminLocality = () => {
     return (
         <>
-
-            <h2 style={{ textAlign: "center", margin: 50 }}>Allocating Locality to Locality collector</h2>
+           <h2 style={{ textAlign: "center", marginTop: 70 , marginBottom:50 }}>Allocating Locality to Locality collector</h2>
             <div className='grid-local'>
                 <div className="container-local">
                     <img className='img-local' alt="building" src={avatar} />

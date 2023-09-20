@@ -3,7 +3,7 @@ import React from 'react'
 const Admin = () => {
   return (
     <>
-        <h2 style={{textAlign:"center",margin:40}}> Options </h2>
+         <h2 style={{textAlign:"center",marginTop:70,marginBottom:40}}> Options </h2>
         <br></br>
         <a href="/adminlocal"><h4 style={{textAlign:"center"}}>Allocate Locality to Locality Collector</h4></a>
         <br></br>
