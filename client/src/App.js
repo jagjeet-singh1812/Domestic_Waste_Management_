@@ -9,6 +9,7 @@ import Navigation from "./Component/Nav/Nav";
 import Tra from "./Pages/Trashme/home/home";
 import Trashme from "./Pages/Trashme/containers/App";
 import Details from "./Pages/Trashme/containers/Details";
+import EventPage from "./Pages/EventPage/EventPage";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -24,15 +25,16 @@ const App = () => {
   ) : (
     <>
       <Router>
-      <Navigation /> 
+        <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/leaderboard" element={<Leaderbord />} />
-          <Route path="/Trashme" element={<Tra/>} />
-          <Route path="/items" element={<Trashme/>} />
-          <Route path="/details" element={<Details/>} />  
+          <Route path="/Trashme" element={<Tra />} />
+          <Route path="/items" element={<Trashme />} />
+          <Route path="/details" element={<Details />} />
+          <Route path="/events" element={<EventPage />} />
         </Routes>
-      <Foot />
+        <Foot />
       </Router>
     </>
   );

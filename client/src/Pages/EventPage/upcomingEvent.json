@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Awesome Event 1",
+    "location": "San Francisco, CA",
+    "date": "2023-09-30T12:00:00",
+    "participants": 100
+  },
+  {
+    "name": "Awesome Event 2",
+    "location": "Los Angeles, CA",
+    "date": "2023-10-15T14:30:00",
+    "participants": 75
+  }
+]
