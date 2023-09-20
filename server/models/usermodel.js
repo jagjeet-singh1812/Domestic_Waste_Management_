@@ -6,14 +6,25 @@ const userSchema = mongoose.Schema(
     name: { type: String, required: true },
     email: { type: String, unique: true, required: true },
     password: { type: String, required: true },
-    username: { type: String, unique: true, required: true }, 
-    leaderboard: { type: mongoose.Schema.Types.ObjectId, ref: 'Leaderboard' },
-    role:{type:String,required:true,default:"user"} 
+    username: { type: String, unique: true, required: true },
+    role: { type: String, required: true, default: "user" }, // Set the default role to "user"
+    leaderboard: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Leaderboard',
+    },
   },
   { timestamps: true }
 );
 
-userSchema.methods.matchPassword = async function (enteredPassword) {
+// Custom validation function to conditionally require leaderboard based on role
+userSchema.path('leaderboard').validate(function (value) {
+  if (this.role === "user") {
+    return value !== null;
+  }
+  return true; 
+}, 'Path `{PATH}` is required when role is "user".');
+
+userSchema.methods.matchpassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
 

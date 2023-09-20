@@ -9,12 +9,13 @@ const { notFound, errorHandler } = require('./Middleware/Errormiddleware');
 const   Contactroute=require('./Routes/contactus');
 const userroutes=require("./Routes/userroutes");
 const blogroute=require("./Routes/blogroute");
-
+const Leaderboardroute=require("./Routes/leaderboard")
 app.use(express.json());
 app.use(cors());
 app.use('/api/v1/forms',Contactroute);
 app.use('/api/v1/user',userroutes);
 app.use('/api/v1/blogs',blogroute); 
+app.use('/api/v1/leaderboard',Leaderboardroute); 
 app.use(notFound);
 app.use(errorHandler);
 
