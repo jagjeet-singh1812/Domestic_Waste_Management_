@@ -1,184 +1,178 @@
 // EventPage.js
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import upcomingEvents from "./upcomingEvent.json";
 import pastEvents from "./PastEvent.json";
-import RegistrationForm from "./RegistrationForm";
 import "./EventPage.css";
 
-const EventCard = ({ event, onRegisterClick }) => {
-  const [countdown, setCountdown] = useState({
-    days: "00",
-    hours: "00",
-    minutes: "00",
-    seconds: "00",
+function EventCard({ event }) {
+  const calculateCountdown = () => {
+    const targetDate = new Date(event.date).getTime();
+    const currentDate = new Date().getTime();
+    const timeRemaining = targetDate - currentDate;
+
+    if (timeRemaining <= 0) {
+      return {
+        days: "00",
+        hours: "00",
+        minutes: "00",
+        seconds: "00",
+      };
+    }
+
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor(
+      (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+    );
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+    return {
+      days: days.toString().padStart(2, "0"),
+      hours: hours.toString().padStart(2, "0"),
+      minutes: minutes.toString().padStart(2, "0"),
+      seconds: seconds.toString().padStart(2, "0"),
+    };
+  };
+
+  const [countdown, setCountdown] = useState(calculateCountdown());
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
+  const [registrationData, setRegistrationData] = useState({
+    eventName: event.title,
+    name: "",
+    email: "",
   });
 
   useEffect(() => {
-    const targetDate = new Date(event.date).getTime();
-
     const interval = setInterval(() => {
-      const currentDate = new Date().getTime();
-      const timeRemaining = targetDate - currentDate;
-
-      if (timeRemaining <= 0) {
-        clearInterval(interval);
-        setCountdown({
-          days: "00",
-          hours: "00",
-          minutes: "00",
-          seconds: "00",
-        });
-      } else {
-        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-          (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
-        );
-        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-        setCountdown({
-          days: days.toString().padStart(2, "0"),
-          hours: hours.toString().padStart(2, "0"),
-          minutes: minutes.toString().padStart(2, "0"),
-          seconds: seconds.toString().padStart(2, "0"),
-        });
-      }
+      setCountdown(calculateCountdown());
     }, 1000);
 
     return () => clearInterval(interval);
   }, [event.date]);
 
-  return (
-    <div className="event-card">
-      <h2>{event.name}</h2>
-      <p className="location">{event.location}</p>
-      <p className="date">
-        Starts on: {new Date(event.date).toLocaleDateString()}
-      </p>
-      <div className="countdown">
-        <div className="days">
-          <span className="value">{countdown.days}</span>
-          <span className="label">DAYS</span>
-        </div>
-        <span className="colon">:</span>
-        <div className="hours">
-          <span className="value">{countdown.hours}</span>
-          <span className="label">HOURS</span>
-        </div>
-        <span className="colon">:</span>
-        <div className="minutes">
-          <span className="value">{countdown.minutes}</span>
-          <span className="label">MINS</span>
-        </div>
-        <span className="colon">:</span>
-        <div className="seconds">
-          <span className="value">{countdown.seconds}</span>
-          <span className="label">SEC</span>
-        </div>
-      </div>
-      <p className="participants">
-        {event.type === "upcoming"?"Participanting: ":"Participanted: "} 
-        <span className="participant-count">{event.participants}</span>
-      </p>
+  const handleRegisterClick = () => {
+    setIsRegistrationOpen(true);
+  };
 
-      <div>
-        {event.type === "upcoming" && (
+  const handleRegistrationSubmit = (e) => {
+    e.preventDefault();
+    // Handle the registration data (name, email)
+    console.log("Registration Data:", registrationData);
+    setIsRegistrationOpen(false);
+  };
+
+  return (
+    <div className="project-box">
+      <div className="project-box-content-header">
+        <p className="box-content-header">{event.title}</p>
+        <p className="box-content-subheader">
+          {event.type === "upcoming" ? "Upcoming" : "Past"}
+        </p>
+      </div>
+      <div className="box-progress-wrapper">
+        <p className="box-progress-header">Progress</p>
+        <div className="box-progress-bar">
+          <span
+            className="box-progress"
+            style={{ width: "60%", backgroundColor: "#ff942e" }}
+          ></span>
+        </div>
+        <p className="box-progress-percentage">60%</p>
+      </div>
+      <div className="project-box-footer">
+        <div className="participants">
           <button
-            className="register-button  custom-button pulse"
-            onClick={() => onRegisterClick(event)}
+            className="register-button"
+            style={{ backgroundColor: "#ff942e" }}
+            onClick={handleRegisterClick}
           >
             Register
           </button>
+        </div>
+        {event.type === "upcoming" && (
+          <div className="countdown days-left" style={{ color: "#ff942e" }}>
+            {`${countdown.days}d: ${countdown.hours}h: ${countdown.minutes}m: ${countdown.seconds}s`}
+          </div>
         )}
-      </div>
-    </div>
-  );
-};
-
-const EventPage = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filteredUpcomingEvents, setFilteredUpcomingEvents] =
-    useState(upcomingEvents);
-  const [filteredPastEvents, setFilteredPastEvents] = useState(pastEvents);
-  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
-  const [, setSelectedEvent] = useState(null);
-
-  // Update filtered events when the search term changes
-  useEffect(() => {
-    const search = searchTerm.toLowerCase();
-    const filteredUpcoming = upcomingEvents.filter((event) =>
-      event.name.toLowerCase().includes(search)
-    );
-    const filteredPast = pastEvents.filter((event) =>
-      event.name.toLowerCase().includes(search)
-    );
-    setFilteredUpcomingEvents(filteredUpcoming);
-    setFilteredPastEvents(filteredPast);
-  }, [searchTerm]);
-
-  const handleRegisterClick = (event) => {
-    setSelectedEvent(event);
-    setShowRegistrationForm(true);
-  };
-
-  const handleCloseForm = () => {
-    setSelectedEvent(null);
-    setShowRegistrationForm(false);
-  };
-
-  return (
-    <div className="wholePage">
-      <div className="search-bar">
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Search events"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        <button id="search-button">Search</button>
-      </div>
-
-      <div id="event-sections">
-        <h2>Upcoming events</h2>
-        <div className="event-cards">
-          {filteredUpcomingEvents.map((event, index) => (
-            <EventCard
-              key={index}
-              event={{ ...event, type: "upcoming" }}
-              onRegisterClick={handleRegisterClick}
-            />
-          ))}
-          {filteredUpcomingEvents.length === 0 && (
-            <p>No matching upcoming events found.</p>
-          )}
-        </div>
-
-        {/* <div className="section-line"></div> */}
-        <h2>Past events</h2>
-        <div className="event-cards">
-          {filteredPastEvents.map((event, index) => (
-            <EventCard
-              key={index}
-              event={{ ...event, type: "past" }}
-              onRegisterClick={handleRegisterClick}
-            />
-          ))}
-          {filteredPastEvents.length === 0 && (
-            <p>No matching past events found.</p>
-          )}
+        <div className="days-left" style={{ color: "#ff942e" }}>
+          {event.type === "upcoming"
+            ? `${countdown.days} Days Left`
+            : "Past Event"}
         </div>
       </div>
-
-      {showRegistrationForm && (
-        <div className="registration-form-overlay">
-          <RegistrationForm onClose={handleCloseForm} event={{...filteredUpcomingEvents}} />
+      {isRegistrationOpen && (
+        <div className="registration-popup">
+          <div className="registration-popup-inner">
+            <h2>Registration Form</h2>
+            <form onSubmit={handleRegistrationSubmit}>
+              <div className="form-group">
+                <label>Name:</label>
+                <input
+                  type="text"
+                  value={registrationData.name}
+                  onChange={(e) =>
+                    setRegistrationData({
+                      ...registrationData,
+                      name: e.target.value,
+                    })
+                  }
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label>Email:</label>
+                <input
+                  type="email"
+                  value={registrationData.email}
+                  onChange={(e) =>
+                    setRegistrationData({
+                      ...registrationData,
+                      email: e.target.value,
+                    })
+                  }
+                  required
+                />
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
         </div>
       )}
     </div>
   );
-};
+}
+
+function EventPage() {
+  return (
+    <div className="app-container">
+      <div className="app-content">
+        <div className="page-content">
+          <div className="projects-section">
+            <div className="projects-section-line">
+              <p className="projects-section-header">Upcoming Events</p>
+            </div>
+            <div className="project-box-container">
+              {upcomingEvents.map((event, index) => (
+                <EventCard key={index} event={event} />
+              ))}
+            </div>
+          </div>
+          <div className="projects-section">
+            <div className="projects-section-line">
+              <p className="projects-section-header">Past Events</p>
+            </div>
+            <div className="project-box-container">
+              {pastEvents.map((event, index) => (
+                <EventCard key={index} event={event} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default EventPage;

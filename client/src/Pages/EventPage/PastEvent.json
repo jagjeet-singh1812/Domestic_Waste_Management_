@@ -1,14 +1,26 @@
 [
-  {
-    "name": "Last Event 1",
-    "location": "New York, NY",
-    "date": "2023-08-20T10:00:00",
-    "participants": 1502
-  },
-  {
-    "name": "Last Event 2",
-    "location": "Chicago, IL",
-    "date": "2023-07-05T09:15:00",
-    "participants": 1220
-  }
-]
+    {
+      "title": "Past Event 1",
+      "month": "Dec",
+      "day": "10",
+      "imageUrl": "https://example.com/past-event1-image.jpg",
+      "venue": "Past Venue 1",
+      "mapLink": "https://www.example.com/past-event1-maps",
+      "date": "2023-08-20T10:00:00Z",
+      "time": "6:00 PM",
+      "story": "Description of past event 1.",
+      "type": "past"
+    },
+    {
+      "title": "Past Event 2",
+      "month": "Oct",
+      "day": "20",
+      "imageUrl": "https://example.com/past-event2-image.jpg",
+      "venue": "Past Venue 2",
+      "mapLink": "https://www.example.com/past-event2-maps",
+     "date": "2023-08-20T10:00:00Z",
+      "time": "8:00 PM",
+      "story": "Description of past event 2.",
+      "type": "past"
+    }
+  ]

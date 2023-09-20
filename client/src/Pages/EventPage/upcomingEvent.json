@@ -1,39 +1,26 @@
 [
-  {
-    "name": "Awesome Event 1",
-    "location": "San Francisco, CA",
-    "date": "2023-09-30T12:00:00",
-    "participants": 100
-  },
-  {
-    "name": "Awesome Event 2",
-    "location": "Los Angeles, CA",
-    "date": "2023-10-15T14:30:00",
-    "participants": 75
-  },
-  {
-    "name": "Awesome Event 3",
-    "location": "New York, NY",
-    "date": "2023-11-05T11:45:00",
-    "participants": 120
-  },
-  {
-    "name": "Awesome Event 4",
-    "location": "Chicago, IL",
-    "date": "2023-11-20T09:00:00",
-    "participants": 90
-  },
-  {
-    "name": "Awesome Event 5",
-    "location": "Miami, FL",
-    "date": "2023-12-10T16:15:00",
-    "participants": 150
-  },
-  {
-    "name": "Awesome Event 6",
-    "location": "Seattle, WA",
-    "date": "2023-12-25T18:30:00",
-    "participants": 80
-  }
-]
-
+    {
+      "title": "DASTAAN - a tribute to Rekha",
+      "month": "Jan",
+      "day": "27",
+      "imageUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGV2ZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "venue": "Gyan Manch",
+      "mapLink": "https://www.google.co.in",
+      "date": "2023-10-20T10:00:00Z",
+      "time": "5:30 PM",
+      "story": "\"For a woman to be complete, she has to be a blend of Paro & Chandramukhi. I feel that I am that woman.\" - Rekha",
+      "type": "upcoming"
+    },
+    {
+      "title": "Another Upcoming Event",
+      "month": "Feb",
+      "day": "15",
+      "imageUrl": "https://example.com/another-event-image.jpg",
+      "venue": "Event Venue",
+      "mapLink": "https://www.example.com/maps",
+      "date": "2023-10-20T10:00:00Z",
+      "time": "7:00 PM",
+      "story": "Description of the upcoming event.",
+      "type": "upcoming"
+    }
+  ]
