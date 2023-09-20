@@ -1,0 +1,220 @@
+/* Styling for the main container */
+.container {
+    display: flex;
+    /* background-color: skyblue; */
+    padding: 20px;
+    height: fit-content;
+}
+/* Styling for the left content */
+.left-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Styling for the heading */
+.heading {
+    font-size: 70px;
+    font-weight: bold;
+    padding: 0px 0px 0px 0px;
+    /* margin: 0; */
+}
+/* Add a cool blue underline effect below headings */
+.heading::after {
+    content: "";
+    display: block;
+    width: 170px; /* Adjust the width as needed */
+    height: 7px; /* Adjust the height as needed */
+    position: relative;
+    top:0%;
+    left:1%;
+    background-color: var(--accent-color-1); /* Choose your desired color */
+    /* margin-top: 8px; Adjust the spacing between text and underline */
+  }
+  
+/* Styling for the sub-heading */
+.sub-heading {
+    font-size: 35px;
+    color: #333;
+    /* Optional: Customize the color */
+    margin-top: 5px;
+}
+
+/* Styling for the description text */
+.description {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-top: 15px;
+}
+
+/* Styling for the right content (infographic) */
+.right-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Styling for the infographic image */
+.infographic {
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 1016px) {
+    .container {
+      flex-direction: column; /* Change to a column layout for small screens */
+    }
+  
+    .image-left,
+    .image-right {
+      width: 100%; /* Make both images full width on small screens */
+      max-height: auto;
+    }
+    
+    .text-content {
+      order: 1; /* Reorder text content to appear after the image on small screens */
+    }
+  }
+
+  
+  
+  /* YourComponent.css */
+
+/* Style for the custom container */
+.custom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style for the survey section */
+  /* Base styles for the custom survey section */
+.custom-survey {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  
+  /* Style for the survey image */
+  .custom-survey-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Style for the survey text */
+  .custom-survey-text {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 20px; /* Add margin to separate image and text on small screens */
+  }
+  
+  /* Style for the survey text heading */
+  .custom-survey-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the survey text paragraphs */
+  .custom-survey-text p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive styles */
+  @media screen and (min-width: 1015px) {
+    /* Apply these styles for screens wider than 768px */
+    .custom-survey {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    /* Adjust the margin for the text container */
+    .custom-survey-text {
+      margin-top: 0;
+      margin-left: 20px; /* Add some space between image and text */
+    }
+  }
+  
+  /* Style for the disease statistics section */
+  .custom-disease-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .custom-disease-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Style for the custom percentage bar */
+  .custom-percentage-bar {
+    background-color: green;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the custom percentage label inside the bar */
+  .custom-percentage-label {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Style for the custom disease name */
+  .custom-disease-name {
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* Style for the custom disease information */
+  .custom-disease-info {
+    color: #555;
+    font-size: 14px;
+  }
+  
+  /* Style for the percentage increase text */
+  .custom-disease-increase {
+    font-weight: bold;
+    color:red;
+    font-size: 16px;
+  }
+  /* Style for the custom disease card */
+.custom-disease-card {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column; /* Add this line */
+    align-items: center; /* Add this line */
+  }
+  
+  /* Style for the custom disease image */
+  .custom-disease-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Add this line to create spacing between the image and text */
+  }
+  
+
+
+
+
+
+
+ 
