@@ -2,16 +2,7 @@ import React from "react";
 import "./home.css";
 import BlogSlider from "../../Component/BlogSlider/Blogslider";
 import "./YourComponent.css"; // Import your CSS file for styling
-// const Home = () => {
-//   return (
-//     <div>
-//         <div className="temp"></div>
-//       <h1>mai home hu</h1>
-//     </div>
-//   )
-// }
 
-// export default Home
 const Home = () => {
   // Define the percentages for each disease
   const diseases = [
@@ -34,22 +25,9 @@ const Home = () => {
 
   return (
     <>
+    <div className="test"></div>
       <section className="page-1">
-        <header>
-          <h2>
-            <a href="#" className="logo">
-              Logo
-            </a>
-          </h2>
-          <div className="navigation">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Info</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-          </div>
-        </header>
-        <div className="content">
+        <div className="contentx">
           <div className="info">
             <h2 style={{ color: "white" }}>
               God's Own Country <br />
@@ -127,14 +105,6 @@ const Home = () => {
                 alt={disease.name}
                 className="custom-disease-image"
               />
-              {/* <div
-                className="custom-percentage-bar"
-                style={{ backgroundColor: "green" }}
-              >
-                <span className="custom-percentage-label">
-                  {disease.percentage}%
-                </span>
-              </div> */}
               <h2 className="custom-disease-name">{disease.name}</h2>
               <p className="custom-disease-info">{disease.info}</p>
               <p className="custom-disease-increase">
@@ -191,7 +161,7 @@ const Home = () => {
       <section className="container">
         <div className="left-content">
           <img
-            src="./Reuse.jpg" // Replace with your image for Reuse
+            src="./Reuse.jpg"
             alt="Reuse Image"
             className="image-left"
             style={{ height: "100%", width: "100%" }}
