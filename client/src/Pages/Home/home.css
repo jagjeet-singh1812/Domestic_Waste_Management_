@@ -58,12 +58,12 @@ header .navigation a:hover {
     background: #fff;
 }
 
-.content {
+.contentx {
     max-width: 650px;
     margin: 60px 100px;
 }
 
-.content .info h2 {
+.contentx .info h2 {
     color: #226A80;
     font-size: 55px;
     text-transform: uppercase;
@@ -73,19 +73,19 @@ header .navigation a:hover {
     margin-bottom: 30px;
 }
 
-.content .info h2 span {
+.contentx .info h2 span {
     color: #fff;
     font-size: 50px;
     font-weight: 600;
 }
 
-.content .info p {
+.contentx .info p {
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 40px;
 }
 
-.content .info-btn {
+.contentx .info-btn {
     color: #fff;
     background: #226A80;
     text-decoration: none;
@@ -98,7 +98,7 @@ header .navigation a:hover {
     transition-property: background;
 }
 
-.content .info-btn:hover {
+.contentx .info-btn:hover {
     background: #0C4F60;
 }
 
@@ -197,33 +197,33 @@ label {
         bottom: -6px;
     }
 
-    .content .info h2 {
+    .contentx .info h2 {
         font-size: 45px;
         line-height: 50px;
     }
 
-    .content .info h2 span {
+    .contentx .info h2 span {
         font-size: 40px;
         font-weight: 600;
     }
 
-    .content .info p {
+    .contentx .info p {
         font-size: 14px;
     }
 }
 
 @media (max-width: 560px) {
-    .content .info h2 {
+    .contentx .info h2 {
         font-size: 35px;
         line-height: 40px;
     }
 
-    .content .info h2 span {
+    .contentx .info h2 span {
         font-size: 30px;
         font-weight: 600;
     }
 
-    .content .info p {
+    .contentx .info p {
         font-size: 14px;
     }
 }
