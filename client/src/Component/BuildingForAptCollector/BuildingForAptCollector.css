@@ -1,0 +1,27 @@
+.grid-apt{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.container-apt{
+  background-color: #ccc;
+  display:flex;
+  flex-direction: row;
+  width:400px;
+  height: 100px ;
+  margin: 70px 50px;
+}
+.img-apt{
+  width:8rem;
+}
+.heading-apt{
+  padding: 30px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.btn-apt{
+    margin-top: 11px;
+    padding: 5px 4px;
+    border-radius: 10px;
+    cursor: pointer;
+}
