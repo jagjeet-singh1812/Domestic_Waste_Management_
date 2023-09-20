@@ -8,12 +8,10 @@ router.get('/', (req, res) => {
 });
 
 router.post('/Question', questioncontroller);
-router.post('/Bookchat', bookchatcontroller);
 router.post('/Contactus', contactcontroller);
 router.post('/newsletter',newslettercontroller);
 
 router.get('/getallquestion', protect,fetchallquestion);
-router.get('/getallbookchat',protect, fetchallchat);
 router.get('/getallcontact',protect,fetchallcontact);
 router.get('/getallnewsletter',protect,fetchall_letter);
 
