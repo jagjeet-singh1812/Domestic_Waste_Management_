@@ -6,7 +6,6 @@ import Foot from "./Component/Foot/Foot";
 import Splash from "./Component/Splash/splash";
 import Leaderbord from "./Pages/Leaderboard/Leaderbord";
 import Navigation from "./Component/Nav/Nav"; // Correct import statement
-
 const App = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -21,12 +20,12 @@ const App = () => {
   ) : (
     <>
       <Router>
-      <Navigation /> 
+        <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/leaderboard" element={<Leaderbord />} />
         </Routes>
-      <Foot />
+        <Foot />
       </Router>
     </>
   );
