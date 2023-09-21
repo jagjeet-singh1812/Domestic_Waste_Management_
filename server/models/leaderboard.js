@@ -22,8 +22,15 @@ const leaderboardSchema = new mongoose.Schema({
     type: String, 
     default: '', 
   },
+  lastDate: {
+    type: String, 
+    default: '', 
+  }
 });
 
+leaderboardSchema.virtual('totalpoints').get(function () {
+  return this.properSeg + this.nonSeg + this.dailyVisit;
+});
 const Leaderboard = mongoose.model('Leaderboard', leaderboardSchema);
 
 module.exports = Leaderboard;

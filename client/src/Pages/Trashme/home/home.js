@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 const Tra = () => {
   return (
+    <>
+      <div className="test"></div>
     <div className="container">
       <div className="content">
         <div className="title">Where does your trash go?</div>
@@ -28,6 +30,7 @@ const Tra = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

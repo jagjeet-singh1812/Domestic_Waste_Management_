@@ -11,6 +11,13 @@ import Trashme from "./Pages/Trashme/containers/App";
 import Details from "./Pages/Trashme/containers/Details";
 import EventPage from "./Pages/EventPage/EventPage";
 
+import AptCollector from "./Pages/AptCollector/AptCollector";
+import Flat from "./Component/Flat/Flat";
+import Admin from "./Pages/Admin/Admin";
+import AdminLocality from "./Pages/AdminLocality/AdminLocality";
+import AdminApt from "./Pages/AdminApt/AdminApt";
+import Login from "./Pages/Login/Login";
+
 const App = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -29,10 +36,22 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/leaderboard" element={<Leaderbord />} />
-          <Route path="/Trashme" element={<Tra />} />
-          <Route path="/items" element={<Trashme />} />
-          <Route path="/details" element={<Details />} />
+
+
+
+
           <Route path="/events" element={<EventPage />} />
+
+          <Route path="/Trashme" element={<Tra/>} />
+          <Route path="/items" element={<Trashme/>} />
+          <Route path="/details" element={<Details/>} />
+          <Route path="/aptcollector" element={<AptCollector></AptCollector>}/>
+          <Route path="/flat" element={<Flat></Flat>}></Route>
+          <Route path="/admin" element={<Admin></Admin>}></Route>
+          <Route path="/adminlocal" element={<AdminLocality></AdminLocality>}></Route>
+          <Route path="/adminapt" element={<AdminApt></AdminApt>}></Route>
+          <Route path="/login" element={<Login/>} />  
+
         </Routes>
         <Foot />
       </Router>
