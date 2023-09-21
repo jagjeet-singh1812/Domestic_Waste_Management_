@@ -1,0 +1,226 @@
+/* EventPage.css */
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f4f8;
+  padding: 20px;
+}
+
+.app-content {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.page-content {
+  margin-top: 80px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.projects-section {
+  margin-bottom: 30px;
+}
+
+.projects-section-line {
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+}
+
+.projects-section-header {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* EventCard.css */
+
+.project-box {
+  margin-top: 30px;
+  border-radius: 20px;
+  padding: 16px;
+  background-color: lightpink;
+  width: calc(50% - 16px); /* 50% width with spacing for two cards in a row */
+  margin-right: 16px; /* Adjust the spacing between cards */
+  margin-bottom: 16px; /* Adjust the spacing between rows */
+  display: inline-block;
+  vertical-align: top; 
+  background-color:#F4EEEE;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.project-box:last-child {
+  margin-right: 0; /* Remove right margin for the last card in a row */
+}
+
+.project-box-content-header {
+  width: 300px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.box-content-subheader {
+  font-size: 14px;
+  line-height: 24px;
+  opacity: 0.7;
+}
+
+.box-progress {
+  display: block;
+  height: 4px;
+  border-radius: 6px;
+}
+
+.box-progress-bar {
+  width: 100%;
+  height: 4px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #fff;
+  margin: 8px 0;
+}
+
+.box-progress-header {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  margin: 0;
+}
+
+.box-progress-percentage {
+  text-align: right;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.project-box-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  position: relative;
+}
+
+.participants {
+  display: flex;
+  align-items: center;
+}
+
+.add-participant {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-left: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.days-left {
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  padding: 6px 16px;
+  font-weight: 700;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 520px) {
+  .project-box {
+    width: 100%; /* Full width for small screens */
+    margin-right: 0; /* Remove right margin for small screens */
+  }
+
+  .box-content-header {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .box-content-subheader {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .project-boxes.jsListView .project-box-header > span {
+    font-size: 10px;
+  }
+
+  .box-progress-header {
+    font-size: 12px;
+  }
+
+  .box-progress-percentage {
+    font-size: 10px;
+  }
+
+
+  .countdown {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff942e;
+  margin: 10px 0;
+}
+
+/* .days-left {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ff942e;
+} */
+
+  .days-left {
+    font-size: 8px;
+    padding: 6px 6px;
+    text-align: center;
+  }
+
+  .project-boxes.jsListView .project-box > * {
+    margin-right: 10px;
+  }
+
+  .project-boxes.jsListView .more-wrapper {
+    right: 2px;
+    top: 10px;
+  }
+}
+
+.register-button {
+  background-color: rgb(62, 143, 181);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  font-size: 13px;
+  cursor: pointer;
+
+}
+
+
+.event-image {
+  width: 250px; /* Adjust the width as needed */
+  height: auto; /* Maintain the aspect ratio */
+  position: relative; /* Position it absolutely within the parent */
+}
+
+
+.cardImage{
+   display: flex;
+}
+
+.maplogo{
+  width: 70px; /* Adjust the width as needed */
+  height: 70px; /* Maintain the aspect ratio */
+  position: relative;
+}
