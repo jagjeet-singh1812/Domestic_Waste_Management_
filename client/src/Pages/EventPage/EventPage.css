@@ -41,14 +41,16 @@
 
 .project-box {
   margin-top: 30px;
-  border-radius: 30px;
+  border-radius: 20px;
   padding: 16px;
-  background-color: #dbf6fd;
+  background-color: lightpink;
   width: calc(50% - 16px); /* 50% width with spacing for two cards in a row */
   margin-right: 16px; /* Adjust the spacing between cards */
   margin-bottom: 16px; /* Adjust the spacing between rows */
   display: inline-block;
-  vertical-align: top;
+  vertical-align: top; 
+  background-color:#F4EEEE;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .project-box:last-child {
@@ -56,6 +58,7 @@
 }
 
 .project-box-content-header {
+  width: 300px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
@@ -191,4 +194,33 @@
     right: 2px;
     top: 10px;
   }
+}
+
+.register-button {
+  background-color: rgb(62, 143, 181);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  font-size: 13px;
+  cursor: pointer;
+
+}
+
+
+.event-image {
+  width: 250px; /* Adjust the width as needed */
+  height: auto; /* Maintain the aspect ratio */
+  position: relative; /* Position it absolutely within the parent */
+}
+
+
+.cardImage{
+   display: flex;
+}
+
+.maplogo{
+  width: 70px; /* Adjust the width as needed */
+  height: 70px; /* Maintain the aspect ratio */
+  position: relative;
 }

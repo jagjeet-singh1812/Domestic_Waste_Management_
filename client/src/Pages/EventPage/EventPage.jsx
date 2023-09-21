@@ -1,10 +1,10 @@
-// EventPage.js
 import React, { useEffect, useState } from "react";
 import upcomingEvents from "./upcomingEvent.json";
 import pastEvents from "./PastEvent.json";
 import "./EventPage.css";
+import RegistrationForm from './RegistrationForm'
 
-function EventCard({ event }) {
+function EventCard({ event, onRegisterClick }) {
   const calculateCountdown = () => {
     const targetDate = new Date(event.date).getTime();
     const currentDate = new Date().getTime();
@@ -65,32 +65,45 @@ function EventCard({ event }) {
 
   return (
     <div className="project-box">
-      <div className="project-box-content-header">
-        <p className="box-content-header">{event.title}</p>
-        <p className="box-content-subheader">
-          {event.type === "upcoming" ? "Upcoming" : "Past"}
-        </p>
-      </div>
-      <div className="box-progress-wrapper">
-        <p className="box-progress-header">Progress</p>
-        <div className="box-progress-bar">
-          <span
-            className="box-progress"
-            style={{ width: "60%", backgroundColor: "#ff942e" }}
-          ></span>
+      <div className="cardImage">
+        <div className="project-box-content-header">
+          <p className="box-content-header">{event.title}</p>
+          <p className="box-content-subheader">{event.venue}</p>
+
+            <div>
+              <a
+                  href={event.mapLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/016/314/354/non_2x/map-pointer-free-png.png"
+                className="maplogo"
+              />
+              </a>
+            </div>
+
+          <p className="box-content-subheader">
+            Date: {event.day} {event.month},{event.year}
+          </p>
         </div>
-        <p className="box-progress-percentage">60%</p>
+
+        <div>
+          <img src={event.imageUrl} alt={event.title} className="event-image" />
+        </div>
       </div>
       <div className="project-box-footer">
-        <div className="participants">
-          <button
-            className="register-button"
-            style={{ backgroundColor: "#ff942e" }}
-            onClick={handleRegisterClick}
-          >
-            Register
-          </button>
+        <div>
+          {event.type === "upcoming" && (
+            <button
+              className="register-button"
+              onClick={() => onRegisterClick(event)}
+            >
+              Register
+            </button>
+          )}
         </div>
+
         {event.type === "upcoming" && (
           <div className="countdown days-left" style={{ color: "#ff942e" }}>
             {`${countdown.days}d: ${countdown.hours}h: ${countdown.minutes}m: ${countdown.seconds}s`}
@@ -102,49 +115,25 @@ function EventCard({ event }) {
             : "Past Event"}
         </div>
       </div>
-      {isRegistrationOpen && (
-        <div className="registration-popup">
-          <div className="registration-popup-inner">
-            <h2>Registration Form</h2>
-            <form onSubmit={handleRegistrationSubmit}>
-              <div className="form-group">
-                <label>Name:</label>
-                <input
-                  type="text"
-                  value={registrationData.name}
-                  onChange={(e) =>
-                    setRegistrationData({
-                      ...registrationData,
-                      name: e.target.value,
-                    })
-                  }
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label>Email:</label>
-                <input
-                  type="email"
-                  value={registrationData.email}
-                  onChange={(e) =>
-                    setRegistrationData({
-                      ...registrationData,
-                      email: e.target.value,
-                    })
-                  }
-                  required
-                />
-              </div>
-              <button type="submit">Submit</button>
-            </form>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
 
 function EventPage() {
+  
+  const [, setSelectedEvent] = useState(null);
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
+
+  const handleRegisterClick = (event) => {
+    setSelectedEvent(event);
+    setShowRegistrationForm(true);
+  };
+
+  const handleCloseForm = () => {
+    setSelectedEvent(null);
+    setShowRegistrationForm(false);
+  };
+
   return (
     <div className="app-container">
       <div className="app-content">
@@ -155,7 +144,11 @@ function EventPage() {
             </div>
             <div className="project-box-container">
               {upcomingEvents.map((event, index) => (
-                <EventCard key={index} event={event} />
+                <EventCard
+                  key={index}
+                  event={event}
+                  onRegisterClick={handleRegisterClick}
+                />
               ))}
             </div>
           </div>
@@ -165,11 +158,23 @@ function EventPage() {
             </div>
             <div className="project-box-container">
               {pastEvents.map((event, index) => (
-                <EventCard key={index} event={event} />
+                <EventCard
+                  key={index}
+                  event={event}
+                  onRegisterClick={handleRegisterClick}
+                />
               ))}
             </div>
           </div>
         </div>
+        {showRegistrationForm && (
+          <div className="registration-form-overlay">
+            <RegistrationForm
+              onClose={handleCloseForm}
+              event={ { ...upcomingEvents } }
+            />
+          </div>
+        )}
       </div>
     </div>
   );
