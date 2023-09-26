@@ -2,7 +2,7 @@ import React from "react";
 import "./home.css";
 import BlogSlider from "../../Component/BlogSlider/Blogslider";
 import "./YourComponent.css"; 
-
+import {motion} from "framer-motion"
 const Home = () => {
   const diseases = [
     {
@@ -25,6 +25,12 @@ const Home = () => {
   return (
     <>
     <div className="test"></div>
+    <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        exit={{ opacity: 0, transition: { duration: 0, delay: 0 } }}
+        transition={{ delay: 0.5, duration: 2 }}
+      >
       <section className="page-1">
         <div className="contentx">
           <div className="info">
@@ -49,8 +55,13 @@ const Home = () => {
           </div>
         </div>
       </section>
+    </motion.div>
 
       <div className="custom-container">
+      <motion.div
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+  >
         <div className="custom-survey">
           <div className="custom-survey-image">
             <img src="./Survey.jpg" alt="Survey Image" />
@@ -77,6 +88,13 @@ const Home = () => {
             </p>
           </div>
         </div>
+        </motion.div>
+        <motion.div 
+      initial={{x:"-100%",opacity:0}}
+      whileInView={{x:0,opacity:1}}
+      exit={{x:"-100%",opacity:0, transition:{duration:0,delay:0}}}
+      transition={{duration:1,delay:0.3,ease:'easeOut'}}
+      >
         <div className="custom-disease-stats">
           {[
             {
@@ -112,6 +130,7 @@ const Home = () => {
             </div>
           ))}
         </div>
+        </motion.div>
       </div>
       <h1
         className="center-text"
@@ -134,7 +153,11 @@ const Home = () => {
       >
         Follow the 3R's
       </h1>
-
+      <motion.div className='videoText'
+      initial={{x:"100%",opacity:0}}
+      whileInView={{x:0,opacity:1}}
+      exit={{x:"100%",opacity:0, transition:{duration:0,delay:0}}}
+      transition={{duration:1,delay:0.6,ease:'easeOut'}}>
       <section className="container">
         <div className="left-content">
           <h1 className="heading">Reduce</h1>
@@ -157,6 +180,15 @@ const Home = () => {
           />
         </div>
       </section>
+      </motion.div>
+
+
+      <motion.div 
+      initial={{x:"-100%",opacity:0}}
+      whileInView={{x:0,opacity:1}}
+      exit={{x:"-100%",opacity:0, transition:{duration:0,delay:0}}}
+      transition={{duration:1,delay:0.3,ease:'easeOut'}}
+      >
       <section className="container">
         <div className="left-content">
           <img
@@ -181,6 +213,14 @@ const Home = () => {
           </div>
         </div>
       </section>
+      </motion.div>
+
+      <motion.div 
+      initial={{x:"-100%",opacity:0}}
+      whileInView={{x:0,opacity:1}}
+      exit={{x:"-100%",opacity:0, transition:{duration:0,delay:0}}}
+      transition={{duration:1,delay:0.3,ease:'easeOut'}}
+      >
       <section className="container">
         <div className="left-content">
           <h1 className="heading">Recycle</h1>
@@ -203,8 +243,10 @@ const Home = () => {
           />
         </div>
       </section>
+      </motion.div>
     </>
   );
 };
 
 export default Home;
+

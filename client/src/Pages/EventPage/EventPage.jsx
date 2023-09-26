@@ -3,7 +3,7 @@ import upcomingEvents from "./upcomingEvent.json";
 import pastEvents from "./PastEvent.json";
 import "./EventPage.css";
 import RegistrationForm from './RegistrationForm'
-
+import {motion} from "framer-motion"
 function EventCard({ event, onRegisterClick }) {
   const calculateCountdown = () => {
     const targetDate = new Date(event.date).getTime();
@@ -134,7 +134,13 @@ function EventPage() {
     setShowRegistrationForm(false);
   };
 
-  return (
+  return (<>
+  <motion.div
+    initial={{opacity:0}}
+    whileInView={{opacity:1}}
+    exit={{opacity:0, transition:{duration:0,delay:0}}}
+    transition={{delay:0.5,duration:2}}
+    >
     <div className="app-container">
       <div className="app-content">
         <div className="page-content">
@@ -177,6 +183,8 @@ function EventPage() {
         )}
       </div>
     </div>
+    </motion.div>
+  </>
   );
 }
 

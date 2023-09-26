@@ -4,7 +4,7 @@ main.table {
     width: 100vw;
     height: 90vh;
     background-color: #fff5;
-    background: url(../../../public/images/html_table.jpg) center / cover;
+    /* background: url(../../../public/images/html_table.jpg) center / cover; */
     backdrop-filter: blur(7px);
     box-shadow: 0 .4rem .8rem #0005;
     border-radius: .8rem;

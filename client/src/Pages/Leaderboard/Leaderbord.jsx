@@ -1,7 +1,7 @@
 import React, { useState, useRef} from "react";
 import "./leaderboard.css";
 import leaderboardData from "./leaderboard.json";
-
+import {motion} from "framer-motion"
 const itemsPerPage = 8;
 
 const Leaderboard = () => {
@@ -157,6 +157,13 @@ const json_btnclick= () => {
 
 
   return (
+    <>
+    <motion.div
+    initial={{opacity:0}}
+    whileInView={{opacity:1}}
+    exit={{opacity:0, transition:{duration:0,delay:0}}}
+    transition={{delay:0.5,duration:2}}
+    >
     <main className="table">
       <section className="table__header">
         <h1>Leaderboard</h1>
@@ -266,6 +273,7 @@ const json_btnclick= () => {
         </div>
       </section>
     </main>
+    </motion.div></>
   );
 };
 
