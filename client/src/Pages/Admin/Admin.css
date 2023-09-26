@@ -1,0 +1,103 @@
+/* Default styles for larger screens */
+.page-section {
+  display: flex;
+  align-items: center;
+  padding: 70px 10px;
+  background-image: url("../../../public/—Pngtree—eco-friendly\ poster\ background\ material_1067128.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.left-content {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.left-image {
+  height: 100%;
+  width: 100%;
+}
+
+.right-content {
+  position: relative;
+  top: 1vh;
+  left: -20vw;
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  width: 19%;
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+  padding-bottom: 0px;
+  border: 1px solid #ccc;
+  border-radius: 51px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.card-subtitle {
+  font-size: 18px;
+  max-width: 100%;
+}
+
+.card-text {
+  max-width: 100%;
+}
+
+.assign-button {
+  background: linear-gradient(to bottom, #007bff, #0056b3);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  text-decoration: none;
+  width: 10vw;
+  transition: background 0.3s ease;
+}
+
+.assign-button:hover {
+  background: linear-gradient(to bottom, #0056b3, #007bff);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .page-section {
+    padding: 50px 10px;
+  }
+
+  .right-content {
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 70%;
+  }
+
+  .assign-button {
+    width: 100%;
+  }
+}
