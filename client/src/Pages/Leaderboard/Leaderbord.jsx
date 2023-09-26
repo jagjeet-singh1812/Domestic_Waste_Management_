@@ -22,7 +22,7 @@ const Leaderboard = () => {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
-
+  
   const handleSearchChange = (event) => {
     setSearchInput(event.target.value);
     setCurrentPage(1); 
@@ -30,11 +30,11 @@ const Leaderboard = () => {
 
 
 
-  const customers_table = document.querySelector('#customers_table');
+  // const customers_table = document.querySelector('#customers_table');
 
 
-
-  const toCSV = function (table) {
+  
+  const toCSV = function  (table) {
     const t_heads = table.querySelectorAll('th'),
         tbody_rows = table.querySelectorAll('tbody tr');
 
@@ -56,6 +56,7 @@ const Leaderboard = () => {
 
 
 const csv_btnfun= () => {
+  const customers_table = document.querySelector('#customers_table');
     const csv = toCSV(customers_table);
     downloadFile(csv, 'csv', 'customer orders');
 }
@@ -81,6 +82,7 @@ const toExcel = function (table) {
 }
 
 const excel_btnclick = () => {
+  const customers_table = document.querySelector('#customers_table');
     const excel = toExcel(customers_table);
     downloadFile(excel, 'excel');
 }
@@ -103,6 +105,7 @@ const downloadFile = function (data, fileType, fileName = '') {
 
 
   const toPDF =()=> {
+    const customers_table = document.querySelector('#customers_table');
     const html_code = `
     <link rel="stylesheet" href="./leaderboard.css">
     <main class="table" >${customers_table.innerHTML}</main>
@@ -151,6 +154,7 @@ const toJSON = function (table) {
 }
 
 const json_btnclick= () => {
+  const customers_table = document.querySelector('#customers_table');
     const json = toJSON(customers_table);
     downloadFile(json, 'json')
 }
