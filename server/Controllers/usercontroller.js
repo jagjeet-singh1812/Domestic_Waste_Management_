@@ -18,8 +18,6 @@ const Registeruser = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error("User Already Exists");
   }
-
-  // Create a new user with a username field set to the name
   const user = await User.create({
     name,
     email,
@@ -28,14 +26,12 @@ const Registeruser = asyncHandler(async (req, res) => {
   });
 
   if (user) {
-    // Create a new leaderboard entry for the user with the same username
     const leaderboard = await Leaderboard.create({ username: name });
-
     res.status(201).json({
       _id: user._id,
       name: user.name,
       email: user.email,
-      token: generatetoken(user._id),
+      token: generatetoken(user._id)
     });
     console.log(user);
   } else {
