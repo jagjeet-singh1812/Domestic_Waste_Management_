@@ -33,17 +33,21 @@
 
 .seat {
   background-color: #444451;
-  height: 16px;
-  width: 15px;
-  margin: 8px;
+  height: 20px;
+  width: 40px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .seat.selected {
   background-color: #6feaf6;
+  color: #242333;
 }
 
 .seat.occupied {
   background-color: #fff;
+  color: #242333;
 }
 
 .seat:nth-of-type(2) {
@@ -105,3 +109,64 @@ p.text {
 p.text span {
   color: #6feaf6;
 }
+
+.modal-container{
+margin-top: 10%;
+margin-bottom: 40%;
+margin-left: 35%;
+padding: 30px;
+width: 450px;
+height: 230px;
+/* display: flex; */
+border-radius: 10px;
+box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+  0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+  margin-bottom: 10vh;
+}
+
+.red_btn{
+border: none;
+outline: none;
+padding: 12px 0;
+border-radius: 20px;
+width: 180px;
+font-weight: bold;
+font-size: 14px;
+cursor: pointer;
+background-color: red;
+color: white;
+margin: 10px;
+}
+
+.green_btn{
+border: none;
+outline: none;
+padding: 12px 0;
+border-radius: 20px;
+width: 180px;
+font-weight: bold;
+font-size: 14px;
+cursor: pointer;
+background-color: greenyellow;
+color: white;
+margin: 10px;
+}
+
+.select {
+outline: none;
+border: none;
+width: 390px;
+padding: 15px;
+border-radius: 10px;
+background-color: #edf5f3;
+margin: 5px 0;
+font-size: 14px;
+/* color: #858484; */
+}
+
+.form_containerl {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
