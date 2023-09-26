@@ -9,6 +9,7 @@ import Navigation from "./Component/Nav/Nav";
 import Tra from "./Pages/Trashme/home/home";
 import Trashme from "./Pages/Trashme/containers/App";
 import Details from "./Pages/Trashme/containers/Details";
+import EventPage from "./Pages/EventPage/EventPage";
 
 import AptCollector from "./Pages/AptCollector/AptCollector";
 import Flat from "./Component/Flat/Flat";
@@ -36,6 +37,12 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/leaderboard" element={<Leaderbord />} />
+
+
+
+
+          <Route path="/events" element={<EventPage />} />
+
           <Route path="/Trashme" element={<Tra/>} />
           <Route path="/items" element={<Trashme/>} />
           <Route path="/details" element={<Details/>} />
