@@ -5,11 +5,8 @@ import { useNavigate } from 'react-router-dom'
 const BuildingForAptCollector = () => {
 
     const navigate = useNavigate();
-
     return (
-        <>
-
-            <h2 style={{ textAlign: "center", color: "black" }}>Building Names</h2>
+        <><h2 style={{ textAlign: "center", color: "black" }}>Building Names</h2>
             <div className='grid-apt'>
                 <div className="container-apt">
                     <img className='img-apt' alt="building" src="https://picsum.photos/200" />

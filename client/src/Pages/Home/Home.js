@@ -1,10 +1,9 @@
 import React from "react";
 import "./home.css";
 import BlogSlider from "../../Component/BlogSlider/Blogslider";
-import "./YourComponent.css"; // Import your CSS file for styling
+import "./YourComponent.css"; 
 
 const Home = () => {
-  // Define the percentages for each disease
   const diseases = [
     {
       name: "Dengue",

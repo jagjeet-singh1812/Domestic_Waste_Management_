@@ -1,0 +1,50 @@
+[
+    {
+      "title": "DASTAAN - a tribute to Rekha",
+      "month": "Jan",
+      "day": "27","year":"2023",
+      "imageUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGV2ZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "venue": "Gyan Manch",
+      "mapLink": "https://www.google.co.in",
+      "date": "2023-10-05T10:00:00Z",
+      "time": "5:30 PM",
+      "story": "\"For a woman to be complete, she has to be a blend of Paro & Chandramukhi. I feel that I am that woman.\" - Rekha",
+      "type": "upcoming"
+    },
+    {
+      "title": "Another Upcoming Event",
+      "month": "Feb",
+      "day": "15","year":"2023",
+      "imageUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGV2ZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "venue": "Event Venue",
+      "mapLink": "https://www.example.com/maps",
+      "date": "2023-10-20T10:00:00Z",
+      "time": "7:00 PM",
+      "story": "Description of the upcoming event.",
+      "type": "upcoming"
+    },
+    {
+      "title": "DASTAAN - a tribute to Rekha",
+      "month": "Jan",
+      "day": "27","year":"2023",
+      "imageUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGV2ZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "venue": "Gyan Manch",
+      "mapLink": "https://www.google.co.in",
+      "date": "2023-10-05T10:00:00Z",
+      "time": "5:30 PM",
+      "story": "\"For a woman to be complete, she has to be a blend of Paro & Chandramukhi. I feel that I am that woman.\" - Rekha",
+      "type": "upcoming"
+    },
+    {
+      "title": "Another Upcoming Event",
+      "month": "Feb",
+      "day": "15","year":"2023",
+      "imageUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGV2ZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "venue": "Event Venue",
+      "mapLink": "https://www.example.com/maps",
+      "date": "2023-10-20T10:00:00Z",
+      "time": "7:00 PM",
+      "story": "Description of the upcoming event.",
+      "type": "upcoming"
+    }
+  ]
