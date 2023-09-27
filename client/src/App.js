@@ -18,6 +18,8 @@ import AdminLocality from "./Pages/AdminLocality/AdminLocality";
 import AdminApt from "./Pages/AdminApt/AdminApt";
 import Login from "./Pages/Login/Login";
 import ContactUs from "./Pages/ContactUs/ContactUs";
+import AboutUs from "./Pages/About/About";
+import Da from "./Pages/Loginadmin/Admin";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -37,6 +39,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/leaderboard" element={<Leaderbord />} />
+          <Route path="/about" element={<AboutUs/>} />
 
 
 
@@ -53,6 +56,7 @@ const App = () => {
           <Route path="/adminapt" element={<AdminApt></AdminApt>}></Route>
           <Route path="/login" element={<Login/>} />  
           <Route path="/contact" element={<ContactUs/>} />  
+          <Route path="/adminaccess" element={<Da/>} />  
         </Routes>
         <Foot />
       </Router>

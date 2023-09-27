@@ -25,9 +25,10 @@
   left: -20vw;
   display: flex;
   gap: 20px;
+display: contents;
 }
 
-.card {
+.cardx {
   width: 19%;
   display: flex;
   gap: 20px;

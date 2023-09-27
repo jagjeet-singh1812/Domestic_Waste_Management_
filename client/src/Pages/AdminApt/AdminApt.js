@@ -5,8 +5,8 @@ import avatar from "../../Assets/avatar.jpg"
 const AdminApt = () => {
     return (
         <>
-
-            <h2 style={{ textAlign: "center", marginTop: 70, marginBottom: 50 }}>Allocating Apartment to Apartment collector</h2>
+  
+        <h2 style={{ textAlign: "center", marginTop: 70, marginBottom: 50 }}>Allocating Apartment to Apartment collector</h2>
             <div className='grid-aptc'>
                 <div className="container-aptc">
                     <img className='img-aptc' alt="building" src={avatar} />

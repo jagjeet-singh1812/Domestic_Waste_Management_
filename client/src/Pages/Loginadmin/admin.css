@@ -1,0 +1,213 @@
+/* Add custom colors */
+:root {
+    --highlight-color: #ffffff; /* Example form highlighting color */
+  }
+  
+  .Homewhole_contactus {
+    display: flex;
+    min-height: 70vh;
+    background: radial-gradient(100.18% 488.14% at 50% 50%, rgba(77, 235, 212, 0) 23.23%, rgba(77, 235, 212, 0.365) 85.73%);
+  }
+  
+  
+  .Homesend-message-form label{
+    font-size:18px;
+  }
+  .Homebook-chat-form label{
+    font-size:18px;
+  }
+  
+  .Homesend-message-form >input[type=text]{
+  padding:3px 15px;
+  font-size: 18px;
+  }
+  .Homesend-message-form >input[type=email]{
+  padding:3px 15px;
+  font-size: 18px;
+  }
+  .Homebook-chat-form >input[type=text]{
+  padding:3px 15px;
+  font-size: 18px;
+  }
+  .Homebook-chat-form >input[type=email]{
+  padding:3px 15px;
+  font-size: 18px;
+  }
+  .Homesend-message-form >input[type=tel]{
+    padding:3px 15px;
+    font-size: 18px;
+  }
+  
+  .Homeright_contactus {
+    width: 100%;
+  }
+  
+  .Homeform-container {
+    width: 33vw;
+    margin: 0 auto;
+  }
+  
+  .Hometabs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+  }
+  
+  .Hometab {
+    padding: 10px 20px;
+    background-color: rgba(255,155,255,0.Home25); 
+    color: var(--text-color); /* Example text color */
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .Hometab.Homeactive {
+    background-color: var(--primary-color); /* Use custom primary color */
+  }
+  
+  .Homeform-content {
+  border: 2px solid #c8c2c2;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.Home5);
+  }
+  
+  /* .Homesend-message-form,
+  .Homebook-chat-form {
+    display: none;
+  } */
+  
+  .Homesend-message-form.Homeactive,
+  .Homebook-chat-form.Homeactive {
+    display: block;
+  }
+  
+  .Homesend-message-form input,
+  .Homesend-message-form textarea,
+  .Homebook-chat-form input,
+  .Homebook-chat-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Example input border color */
+    border-radius: 5px; /* Rounded corners */
+    background: #cdc8c8;
+  font-size: 16px;
+  }
+  
+  .Homesend-message-form input:focus,
+  .Homesend-message-form textarea:focus,
+  .Homebook-chat-form input:focus,
+  .Homebook-chat-form select:focus {
+    outline: none;
+    border-color: var(--highlight-color); 
+    box-shadow: 0 0 5px var(--highlight-color); 
+  }
+  
+  .Homesend-message-form button,
+  .Homebook-chat-form button {
+    padding: 10px 20px;
+    background-color: #343535;; 
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .Homesend-message-form button:hover,
+  .Homebook-chat-form button:hover {
+    background-color: var(--primary-color);
+  }
+  
+  
+  
+  .Homeanimstions_c{
+    max-height: 200px;
+  }
+  
+  .Homelabel {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  
+  .Hometabs>button{
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .Homebtn_book{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Homebtn_submit_full{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Homebtn_submit_full>button{
+    width:10vw;
+  }
+  .Homebtn_book>button{
+    width:10vw;
+  }
+  
+  
+  .Hometitle-lockup{
+    margin: auto;
+  width: 40vw;
+  }
+  
+  .Homev2-subtitle{
+  color:var(--text-color)
+  }
+  
+  .Homeancher a{
+    color:#007bff!important;
+  }
+  
+  
+  @media (max-width:670px){
+    .Homewhole_contactus{
+      flex-direction: column;
+    }
+    .Homeleft_contactus{
+      width:100%;
+    }
+    .Hometitle-lockup {
+      margin: auto;
+      width: 80vw;
+    }
+  .Homeright_contactus{
+    width:100%;
+  }
+  .Homeform-container{
+    width:70vw;
+  }
+  .Homebtn_submit_full > button {
+    width: 20vw;
+  }
+  .Homebtn_book> button {
+    width: 20vw;
+  }
+  }
+  
+  
+  .toast-custom-style{
+    font-family: 'Aldrich';
+    font-size: 15px;
+    color:white;
+    z-index: 999;
+  }
+
+  .pass_container_home{
+display: flex;
+align-items: center;
+background: whitesmoke;
+  }

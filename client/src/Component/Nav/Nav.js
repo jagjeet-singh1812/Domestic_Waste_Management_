@@ -61,7 +61,7 @@ const Navigation = () => {
 
             
             <li>
-              <Link to="/company" className="desktop-item">
+              <Link to="/about" className="desktop-item">
                 About us
               </Link>
               <label  className="mobile-item">
@@ -69,7 +69,7 @@ const Navigation = () => {
               </label>
             </li>
             <li>
-              <Link to="/company" className="desktop-item">
+              <Link to="/contact" className="desktop-item">
                 Contact us
               </Link>
               <label  className="mobile-item">
