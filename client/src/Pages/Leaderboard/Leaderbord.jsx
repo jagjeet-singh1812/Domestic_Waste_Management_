@@ -120,9 +120,6 @@ const downloadFile = function (data, fileType, fileName = '') {
     }, 400);
 }
 
-
-
-
 const toJSON = function (table) {
     let table_data = [],
         t_head = [],

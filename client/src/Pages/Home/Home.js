@@ -171,7 +171,7 @@ const Home = () => {
             natural resources, contributing to a more sustainable future.
           </p>
         </div>
-        <div className="right-content">
+        <div className="aright-content">
           <img
             src="./Reducenew.jpg" // Replace with your infographic image
             alt="Infographic"
@@ -198,7 +198,7 @@ const Home = () => {
             style={{ height: "100%", width: "100%" }}
           />
         </div>
-        <div className="right-content">
+        <div className="aright-content">
           <div className="text-content">
             <h1 className="heading">Reuse</h1>
             <p className="sub-heading">Extend the Lifespan</p>
@@ -234,7 +234,7 @@ const Home = () => {
             sustainability and environmental conservation.
           </p>
         </div>
-        <div className="right-content">
+        <div className="aright-content">
           <img
             src="./Recycle.jpg" // Replace with your image for Recycle
             alt="Recycle Image"
