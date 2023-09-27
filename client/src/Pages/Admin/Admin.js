@@ -1,15 +1,39 @@
-import React from 'react'
+import { Link } from "react-router-dom"; // Assuming you use React Route
+import React from "react";
+import "./Admin.css";
 
 const Admin = () => {
   return (
-    <>
-         <h2 style={{textAlign:"center",marginTop:70,marginBottom:40}}> Options </h2>
-        <br></br>
-        <a href="/adminlocal"><h4 style={{textAlign:"center"}}>Allocate Locality to Locality Collector</h4></a>
-        <br></br>
-        <a href="/adminapt"><h4 style={{textAlign:"center",marginBottom:20}}>Allocate Apartment to Apartment Collector</h4></a>
-    </>
-  )
-}
+    <section className="page-section">
+      <div className="right-content">
+        <div className="card">
+          <div className="card-image">
+            <img src="locality.jpg" alt="Card 1" />
+            <div className="card-content">
+              <div className="card-subtitle">Locality Collector</div>
+              <Link to="/adminlocal">
+                <button className="assign-button">Assign</button>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-image">
+            <img
+              src="./admin.jpg" // Replace with the actual image path
+              alt="Card 2"
+            />
+            <div className="card-content">
+              <div className="card-subtitle">Building Collectors</div>
+              <Link to="/adminapt">
+                <button className="assign-button">Assign</button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-export default Admin
+export default Admin;
