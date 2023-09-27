@@ -17,6 +17,7 @@ import Admin from "./Pages/Admin/Admin";
 import AdminLocality from "./Pages/AdminLocality/AdminLocality";
 import AdminApt from "./Pages/AdminApt/AdminApt";
 import Login from "./Pages/Login/Login";
+import ContactUs from "./Pages/ContactUs/ContactUs";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -51,7 +52,7 @@ const App = () => {
           <Route path="/adminlocal" element={<AdminLocality></AdminLocality>}></Route>
           <Route path="/adminapt" element={<AdminApt></AdminApt>}></Route>
           <Route path="/login" element={<Login/>} />  
-
+          <Route path="/contact" element={<ContactUs/>} />  
         </Routes>
         <Foot />
       </Router>

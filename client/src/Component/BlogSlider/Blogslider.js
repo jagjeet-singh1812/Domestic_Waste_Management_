@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
 import "./Blogslider.css";
+import {motion} from "framer-motion"
 const BlogSlider = () => {
   useEffect(() => {
     // Check if the Swiper library is loaded
@@ -25,6 +26,13 @@ const BlogSlider = () => {
 
   return (
     <>
+      <motion.div
+        initial={{opacity:0}}
+        whileInView={{opacity:1}}
+        exit={{opacity:0, transition:{duration:0,delay:0}}}
+        transition={{delay:0.5,duration:2}}
+        >
+
       <div className="blog-container">
         <div className="blog-slider">
           <div className="blog-slider__wrp swiper-wrapper">
@@ -78,6 +86,7 @@ const BlogSlider = () => {
           <div className="blog-slider__pagination"></div>
         </div>
       </div>
+      </motion.div>
     </>
   );
 };

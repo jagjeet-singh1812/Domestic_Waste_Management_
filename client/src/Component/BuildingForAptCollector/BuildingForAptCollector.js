@@ -3,7 +3,7 @@ import "./BuildingForAptCollector.css"
 import { useNavigate } from 'react-router-dom'
 
 const BuildingForAptCollector = () => {
-
+    
     const navigate = useNavigate();
     return (
         <><h2 style={{ textAlign: "center", color: "black" }}>Building Names</h2>

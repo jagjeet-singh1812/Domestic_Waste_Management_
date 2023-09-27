@@ -9,6 +9,7 @@ const Login = () => {
     settab("login");
   };
   return (
+    <div className="wholly">
     <div className="whole_login">
       <div className="login_container">
         <div className="login_form">
@@ -128,6 +129,7 @@ const Login = () => {
           )}
         </div>
       </div>
+    </div>
     </div>
   );
 };

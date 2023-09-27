@@ -1,11 +1,45 @@
 import React from "react";
 import "./home.css"; // Updated CSS file path
 import { Link } from "react-router-dom";
-
+import {motion} from "framer-motion"
 const Tra = () => {
+
+  const divVariants = {
+    initial: {
+      y: -100, 
+      opacity: 0, 
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: 'spring', 
+        stiffness: 150,
+        damping: 10,
+      },
+    },
+    rebound: {
+      y: 20, 
+      transition: {
+        type: 'spring',
+        stiffness: 50,
+        damping: 30,
+      },
+    },
+  };
+
+  const handleRebound = () => {
+    return divVariants.rebound;
+  };
   return (
     <>
       <div className="test"></div>
+      <motion.div
+      initial="initial"
+      animate="animate"
+      variants={divVariants}
+      onAnimationComplete={handleRebound}
+    >
     <div className="container">
       <div className="content">
         <div className="title">Where does your trash go?</div>
@@ -30,6 +64,7 @@ const Tra = () => {
         </div>
       </div>
     </div>
+    </motion.div>
     </>
   );
 };
